@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, text
 import os
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-my_secret = os.environ['db_conn']
+my_secret = "mysql+pymysql://sql6704638:innfQBqiVg@sql6.freesqldatabase.com/sql6704638"
 engine = create_engine(my_secret)
 db_session = scoped_session(
     sessionmaker(autocommit=False, autoflush=False, bind=engine))
